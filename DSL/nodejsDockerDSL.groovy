@@ -23,22 +23,6 @@ job('Aplicacion Node.js Docker DSL') {
         }
     }
     publishers {
-	slackNotifier {
-            notifyAborted(true)
-            notifyEveryFailure(true)
-            notifyNotBuilt(false)
-            notifyUnstable(false)
-            notifyBackToNormal(true)
-            notifySuccess(true)
-            notifyRepeatedFailure(false)
-            startNotification(false)
-            includeTestSummary(false)
-            includeCustomMessage(false)
-            customMessage(null)
-            sendAs(null)
-            commitInfoChoice('NONE')
-            teamDomain(null)
-            authToken(null)
-        }
+		mailer('gregpalacios26@gmail.com', true, true)
     }
 }
